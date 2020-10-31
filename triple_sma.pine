@@ -1,0 +1,27 @@
+study("Binance Triple SMA", overlay=true)
+sma1 = sma(close, 7)
+sma2 = sma(close, 25)
+sma3 = sma(close, 99)
+
+// Determine values to plot with if/else
+makePlot1 = if(timeframe.period == '60')
+    sma1
+else
+    na
+
+// Determine values to plot with if/else
+makePlot2 = if(timeframe.period == '60')
+    sma2
+else
+    na
+
+// Determine values to plot with if/else
+makePlot3 = if(timeframe.period == '60')
+    sma3
+else
+    na
+
+// Plots
+plot(series=makePlot1, color= color.orange, linewidth=2)
+plot(series=makePlot2, color=color.blue, linewidth=2)
+plot(series=makePlot3, color=color.black, linewidth=2)
