@@ -1,0 +1,9 @@
+study("Triple EMA", overlay=true)
+sma1 = sma(close, 5)
+sma2 = sma(close, 10)
+sma3 = sma(close, 20)
+
+// Plots
+plot(sma1, color= color.orange, linewidth=2)
+plot(sma2, color=color.blue, linewidth=2)
+plot(sma3, color=color.black, linewidth=2)
