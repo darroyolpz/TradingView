@@ -1,7 +1,7 @@
 study("Triple EMA", overlay=true)
-sma1 = sma(close, 5)
-sma2 = sma(close, 10)
-sma3 = sma(close, 20)
+sma1 = ema(close, 5)
+sma2 = ema(close, 10)
+sma3 = ema(close, 20)
 
 // Plots
 plot(sma1, color= color.orange, linewidth=2)
